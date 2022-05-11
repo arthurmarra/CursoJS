@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS DE ORIGEM</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+        input#pais{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pais de Origem</h1>
+    Pais de Origem: <input type="text" name="pais" id="pais">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res"></div>
+    <script>
+        function checar(){
+            var p = document.querySelector('input#pais').value
+            var r = document.querySelector('div#res')
+    
+
+            if (p == "Brasil"){
+                r.innerHTML = `Você nasceu no ${p}! Você é brasileiro!`
+            }else{
+                r.innerHTML = `Você nasceu no(a) ${p}! Você é estrangeiro!`
+            }
+        }
+        
+    </script>
+</body>
+</html>
